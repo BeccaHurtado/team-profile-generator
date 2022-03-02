@@ -3,7 +3,6 @@ const Intern = require("./util/Intern")
 const Engineer = require("./util/Engineer")
 const fs = require('fs')
 const inquirer = require("inquirer")
-const { existentialTypeParam } = require("babel-types")
 
 function init() {
     inquirer.prompt([
@@ -53,7 +52,9 @@ function addManager() {
             name: 'managerOfficeNumber',
             message: "What is your office's number?"
         }
-    ])
+    ]).then(answers => {
+        console.info(answers)
+    })
 }
 
 function addIntern() {
@@ -78,7 +79,35 @@ function addIntern() {
             name: 'internSchoolName',
             message: "What is your School's name?"
         }
-    ])
+    ]).then(answers => {
+        console.info(answers)
+    })
+}
+function addEngineer() {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'engineerName',
+            message: 'What is your name?'
+        },
+        {
+            type: 'input',
+            name: 'engineerId',
+            message: 'What is your ID number?'
+        },
+        {
+            type: 'input',
+            name: 'engineerEmail',
+            message: 'What is your email?'
+        },
+        {
+            type: 'input',
+            name: 'engineerGitHub',
+            message: "What's your GitHub username?"
+        }
+    ]).then(answers => {
+        console.info(answers)
+    })
 }
 
 init()
