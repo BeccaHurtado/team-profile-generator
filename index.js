@@ -53,7 +53,7 @@ function addManager() {
             message: "What is your office's number?"
         }
     ]).then(answers => {
-        console.info(answers)
+        console.log(answers)
     })
 }
 
@@ -80,7 +80,7 @@ function addIntern() {
             message: "What is your School's name?"
         }
     ]).then(answers => {
-        console.info(answers)
+        console.log(answers)
     })
 }
 function addEngineer() {
@@ -106,8 +106,19 @@ function addEngineer() {
             message: "What's your GitHub username?"
         }
     ]).then(answers => {
-        console.info(answers)
+        console.log(answers)
     })
 }
 
-init()
+const writeFile = data => {
+    fs.writeFile('./dist/index.html', data, err => {
+        if (err) {
+            console.log(err)
+            return
+        }
+        else
+        {
+            console.log('Head over to index.html to see your team!')
+        }
+    })
+}
