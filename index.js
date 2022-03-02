@@ -30,3 +30,55 @@ function init() {
         }
     })
 }
+
+function addManager() {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'managerName',
+            message: 'What is your name?'
+        },
+        {
+            type: 'input',
+            name: 'managerId',
+            message: 'What is your ID number?'
+        },
+        {
+            type: 'input',
+            name: 'managerEmail',
+            message: 'What is your email?'
+        },
+        {
+            type: 'input',
+            name: 'managerOfficeNumber',
+            message: "What is your office's number?"
+        }
+    ])
+}
+
+function addIntern() {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'internName',
+            message: 'What is your name?'
+        },
+        {
+            type: 'input',
+            name: 'internId',
+            message: 'What is your ID number?'
+        },
+        {
+            type: 'input',
+            name: 'internEmail',
+            message: 'What is your email?'
+        },
+        {
+            type: 'input',
+            name: 'internSchoolName',
+            message: "What is your School's name?"
+        }
+    ])
+}
+
+init()
