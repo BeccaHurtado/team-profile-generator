@@ -3,6 +3,12 @@ const Intern = require("./util/Intern")
 const Engineer = require("./util/Engineer")
 const fs = require('fs')
 const inquirer = require("inquirer")
+const generateSite = require("./util/generateSite.js")
+const engineerHTML = require("./util/engineerHTML")
+const internHTML = require("./util/internHTML")
+const managerHTML = require("./util/managerHTML")
+
+var htmlContent = "";
 
 function init() {
     inquirer.prompt([
@@ -54,6 +60,12 @@ function addManager() {
         }
     ]).then(answers => {
         console.log(answers)
+        var newManager = new Manager(answers.managerName,answers.managerId, answers.managerEmail, answers.managerOfficeNumber)
+
+        htmlContent +=  managerHTML(answers)
+
+        console.log(htmlContent);
+        init()
     })
 }
 
@@ -110,8 +122,8 @@ function addEngineer() {
     })
 }
 
-const writeFile = data => {
-    fs.writeFile('./dist/index.html', data, err => {
+function exitApp() {
+    fs.writeFile('index.html', data, err => {
         if (err) {
             console.log(err)
             return
@@ -122,3 +134,12 @@ const writeFile = data => {
         }
     })
 }
+
+
+init()
+// .then(answers => {
+//     return generateSite(answers)
+// }).then(data => {
+//     return writeFile(data)
+// })
+
