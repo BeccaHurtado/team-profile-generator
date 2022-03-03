@@ -93,6 +93,12 @@ function addIntern() {
         }
     ]).then(answers => {
         console.log(answers)
+            var newIntern = new Intern(answers.internName,answers.InternId, answers.internEmail, answers.internSchoolName)
+    
+            htmlContent +=  internHTML(answers)
+    
+            console.log(htmlContent);
+            init()
     })
 }
 function addEngineer() {
@@ -123,6 +129,7 @@ function addEngineer() {
 }
 
 function exitApp() {
+    var data = generateSite(htmlContent)
     fs.writeFile('index.html', data, err => {
         if (err) {
             console.log(err)
