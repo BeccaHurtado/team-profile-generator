@@ -16,7 +16,7 @@ function init() {
             type: 'list',
             name: 'type',
             message: 'Are you a Manager, Intern, or Engineer?',
-            choices: ['Manager', 'Intern', 'Engineer', 'None']
+            choices: ['Manager', 'Intern', 'Engineer', 'Exit']
         }
     ]).then(function(response) {
         switch(response.type) {
@@ -29,7 +29,7 @@ function init() {
             case "Engineer":
                 addEngineer()
                 break;
-            case "None":
+            case "Exit":
                 exitApp()
                 break;
         }
