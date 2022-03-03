@@ -125,6 +125,12 @@ function addEngineer() {
         }
     ]).then(answers => {
         console.log(answers)
+        var newEngineer = new Engineer(answers.engineerName,answers.engineerId, answers.engineerEmail, answers.engineerGitHub)
+    
+            htmlContent +=  engineerHTML(answers)
+    
+            console.log(htmlContent);
+            init()
     })
 }
 
