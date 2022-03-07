@@ -64,7 +64,7 @@ function addManager() {
 
         htmlContent +=  managerHTML(answers)
 
-        console.log(htmlContent);
+        // console.log(htmlContent);
         init()
     })
 }
@@ -97,7 +97,7 @@ function addIntern() {
     
             htmlContent +=  internHTML(answers)
     
-            console.log(htmlContent);
+            // console.log(htmlContent);
             init()
     })
 }
@@ -129,7 +129,7 @@ function addEngineer() {
     
             htmlContent +=  engineerHTML(answers)
     
-            console.log(htmlContent);
+            // console.log(htmlContent);
             init()
     })
 }
