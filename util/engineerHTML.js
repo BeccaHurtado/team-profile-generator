@@ -6,6 +6,7 @@ const engineerHTML = (data) =>{
     <h5 class="card-subtitle text-muted">Engineer</h5>
     <p class="card-text">ID: ${data.engineerId} </p>
     <a class="card-text link-secondary" href="mailto:${data.engineerEmail}">Email: ${data.engineerEmail}</a>
+    </br >
     <a class="card-text link-secondary" href="https://github.com/${data.engineerGitHub}">GitHub: ${data.engineerGitHub}</a>
   </div>
     </div>
