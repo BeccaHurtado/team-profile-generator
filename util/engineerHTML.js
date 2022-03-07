@@ -1,14 +1,14 @@
 const engineerHTML = (data) =>{
     return(`
-    <div class="card" style="width: 18rem;">
+    <div class="card border-light mb-3" style="max-width: 18rem;">
+  <div class="card-header text-capitalize fs-3">${data.engineerName}</div>
   <div class="card-body">
-    <h5 class="card-title">${data.engineerName}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Engineer</h6>
+    <h5 class="card-subtitle text-muted">Engineer</h5>
     <p class="card-text">ID: ${data.engineerId} </p>
-    <a class="card-text" href="mailto:${data.engineerEmail}">Email: ${data.engineerEmail} </a>
-    <a class="card-text" href="https://github.com/${data.engineerGitHub}">GitHub: ${data.engineerGithub} </a>
+    <a class="card-text link-secondary" href="mailto:${data.engineerEmail}">Email: ${data.engineerEmail}</a>
+    <p class="card-text link-secondary" href="https://github.com/${data.engineerGitHub}">GitHub: ${data.engineerGitHub}</a>
   </div>
-</div>
+    </div>
     `)
 }
 

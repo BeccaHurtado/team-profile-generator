@@ -1,14 +1,14 @@
 const internHTML = (data) =>{
     return(`
-    <div class="card" style="width: 18rem;">
+    <div class="card border-light mb-3" style="max-width: 18rem;">
+  <div class="card-header text-capitalize fs-3">${data.internName}</div>
   <div class="card-body">
-    <h5 class="card-title">${data.internName}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Intern</h6>
-    <p class="card-text">ID: ${data.internId} </p>
-    <a class="card-text" href="mailto:${data.internEmail}">Email: ${data.internEmail} </a>
-    <p class="card-text">School Name: ${data.internSchoolName} </p>
+    <h5 class="card-subtitle text-muted">Intern</h5>
+    <p class="card-text">ID: ${data.internId}</p>
+    <a class="card-text link-secondary" href="mailto:${data.internEmail}">Email: ${data.internEmail} </a>
+    <p class="card-text text-capitalize">School Name: ${data.internSchoolName} </p>
   </div>
-</div>
+    </div>
     `)
 }
 

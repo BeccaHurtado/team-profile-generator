@@ -10,7 +10,12 @@ const generateSite = data => {
     <title>Team Profile</title>
 </head>
 <body>
- <h5> ${data} <h5>
+<header class="fs-1 bg-dark text-white text-center">
+Team
+</header>
+<div class="row d-flex justify-content-center g-4">
+ <p> ${data} <p>
+ </div>
     
 </body>
 </html>
