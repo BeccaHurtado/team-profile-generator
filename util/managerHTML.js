@@ -1,6 +1,6 @@
 const managerHTML = (data) =>{
     return(`
-    <div class="card border-light mb-3" style="max-width: 18rem;">
+    <div class="card mb-3 g-4" style="max-width: 18rem;">
   <div class="card-header text-capitalize fs-3">${data.managerName}</div>
   <div class="card-body">
     <h5 class="card-subtitle text-muted">Manager</h5>

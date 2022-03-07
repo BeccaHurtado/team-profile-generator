@@ -1,6 +1,6 @@
 const internHTML = (data) =>{
     return(`
-    <div class="card border-light mb-3" style="max-width: 18rem;">
+    <div class="card g-4 mb-3" style="max-width: 18rem;">
   <div class="card-header text-capitalize fs-3">${data.internName}</div>
   <div class="card-body">
     <h5 class="card-subtitle text-muted">Intern</h5>
